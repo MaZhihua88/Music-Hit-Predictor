@@ -18,7 +18,7 @@ st.markdown("---")
 @st.cache_resource
 def load_model():
     # ⚠️ 请确保路径是你保存的那个没有任何随机漂移的 pkl 文件
-    return return joblib.load('music_hit_model.pkl')
+    return  joblib.load('music_hit_model.pkl')
 
 try:
     model = load_model()
