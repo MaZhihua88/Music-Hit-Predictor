@@ -75,7 +75,8 @@ input_df = pd.DataFrame([{
 }])
 
 # 模型预测
-prob = model.predict_proba(input_df)[0][1]
+# 修改后（加一个 float 强制转换）：
+prob = float(model.predict_proba(input_df)[0][1])
 is_hit = prob >= 0.50
 
 # === 右侧：输出看板 ===
